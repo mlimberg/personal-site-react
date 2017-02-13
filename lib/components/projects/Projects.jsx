@@ -17,7 +17,7 @@ export default class Projects extends Component {
 
     return (
       <div className='project-list-container'>
-        {/* <img src={require('../../images/rio-campsite.jpg')} /> */}
+        {/* <img className='rio-img' src='./lib/components/projects/rio-copy.jpg' /> */}
         {projects}
       </div>
     );
