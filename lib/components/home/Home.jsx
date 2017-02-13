@@ -1,9 +1,10 @@
 import React from 'react';
+import './home-style';
 
 const Home = () => {
   return (
-    <div>
-      HOME!
+    <div className='main-app'>
+      {/* HOME! */}
     </div>
   )
 }
