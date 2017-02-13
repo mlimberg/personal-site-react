@@ -6,6 +6,7 @@ const Header = () => {
   return (
     <div className='header-container'>
       <img src='https://cdn.okccdn.com/php/load_okc_image.php/images/1x1/425x1000/0x0/0x0/0/17045396890459222340.jpeg'/>
+      {/* <img src='../../images/rio-campsite.jpg'/> */}
       <div className='header-name-title'>
         <h1 className='header-name'>Mike Limberg</h1>
         <h3 className='header-title'>-Front-End Developer-</h3>
