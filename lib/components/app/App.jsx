@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../header/Header';
+import ProjectList from '../../projectList/ProjectList';
 
 export default class App extends Component {
   constructor() {
@@ -7,10 +8,15 @@ export default class App extends Component {
   }
 
   render() {
+
+    const Children = React.cloneElement(this.props.children, {
+      projects: ProjectList,
+    })
+
     return (
       <div>
         <Header />
-        {this.props.children}
+        {Children}
       </div>
     );
   }
