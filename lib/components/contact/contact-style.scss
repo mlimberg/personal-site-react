@@ -1,0 +1,21 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form-name, .contact-form-email {
+  margin: 10px auto;
+  border: none;
+  border-bottom: 1px solid;
+}
+
+.contact-form-message {
+  border: none;
+  border-bottom: 1px solid;
+  height: 50px;
+}
+
+.invalid-email-error {
+  color: red;
+}
