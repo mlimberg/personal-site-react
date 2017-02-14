@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ProjectCard from '../projectCard/ProjectCard';
 import './projects-list-style';
-// import rioImg from '../../images/rio-copy.jpg'
+// import rioImgPP from '../../images/rio-copy.jpg'
 
 export default class Projects extends Component {
   constructor(props) {
