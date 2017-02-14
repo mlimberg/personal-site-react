@@ -4,7 +4,7 @@ import './header-style';
 
 const Header = () => {
   return (
-    <div className='header-container'>
+    <div className='header'>
 
       <Link to='/'>
         <img src='https://cdn.okccdn.com/php/load_okc_image.php/images/1x1/425x1000/0x0/0x0/0/17045396890459222340.jpeg'/>

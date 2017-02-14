@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../header/Header';
 import ProjectList from '../../projectList/ProjectList';
+import './app-style.scss'
 
 export default class App extends Component {
   constructor() {
@@ -15,8 +16,10 @@ export default class App extends Component {
 
     return (
       <div>
-        <Header />
-        {Children}
+          <Header />
+          <div className="other">
+            {Children}
+          </div>
       </div>
     );
   }

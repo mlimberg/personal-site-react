@@ -1,7 +1,9 @@
 .project-list-container {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;;
+  justify-content: space-around;
+  // padding-top: 200px;
+  // top: -200px;
 }
 
 .project-card-img {
