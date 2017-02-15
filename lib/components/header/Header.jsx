@@ -7,7 +7,7 @@ export default class Header extends Component {
   constructor() {
     super();
     this.state = {
-      hover: false
+      // hover: false
     }
   }
 
@@ -15,11 +15,8 @@ export default class Header extends Component {
     return (
       <div className='header'>
 
-        <Link to='/'>
-        <img className='headshot'
-             src={this.state.hover ? 'lib/images/personal_site_hat_headshot.png' : 'lib/images/personal_site_headshot.png' }   
-             onMouseOver={() => this.setState({ hover: true })}
-             onMouseLeave={() => this.setState({ hover: false })}/>
+      <Link to='/'>
+        <div className='headshot'></div>
       </Link>
 
       <div className='header-name-title'>
