@@ -21,7 +21,7 @@ export default class Header extends Component {
 
       <div className='header-name-title'>
         <h1 className='header-name'>Mike Limberg</h1>
-        <h3 className='header-title'>-Front-End Developer-</h3>
+        <h3 className='header-title'>Front-End Developer</h3>
       </div>
 
       <ul className='top-nav-links'>
