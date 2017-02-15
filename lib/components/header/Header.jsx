@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router';
 import './header-style';
 
-const Header = () => {
-  return (
-    <div className='header-container'>
 
-      <Link to='/'>
-        <img src='https://cdn.okccdn.com/php/load_okc_image.php/images/1x1/425x1000/0x0/0x0/0/17045396890459222340.jpeg'/>
-        {/* <img src='../../images/rio-campsite.jpg'/> */}
+export default class Header extends Component {
+  constructor() {
+    super();
+    this.state = {
+      hover: false
+    }
+  }
+
+  render() {
+    return (
+      <div className='header'>
+
+        <Link to='/'>
+        <img className='headshot'
+             src={this.state.hover ? 'lib/images/personal_site_hat_headshot.png' : 'lib/images/personal_site_headshot.png' }   
+             onMouseOver={() => this.setState({ hover: true })}
+             onMouseLeave={() => this.setState({ hover: false })}/>
       </Link>
 
       <div className='header-name-title'>
@@ -29,6 +40,5 @@ const Header = () => {
       </ul>
     </div>
   )
+  }
 }
-
-export default Header;
