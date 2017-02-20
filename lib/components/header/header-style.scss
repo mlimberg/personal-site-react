@@ -1,51 +1,65 @@
+@import 'lib/styles/variables';
+
 .header {
   display: flex;
   flex-direction: row;
-  background-color: lightgreen;
+  background-color: $header-background-color;
   position: fixed;
   top: 0;
   width: 100%;
-  height: 100px;
+  height: 110px;
+  z-index: 2;
+  padding: 10px;
 }
 
 .top-nav-links {
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: center;
+}
+
+.header-option {
 }
 
 .top-nav-links li {
+  align-self: center;
   padding: 20px;
   font-weight: 500;
   font-size: 24px;
 }
 
-a:link, a:active, a {
+a:link, a:active, a, a:visited {
   text-decoration: none;
+  color: inherit;
+}
+
+.header-name {
+  font-size: 4.8em;
+}
+
+.header-title {
+  padding: 10px;
+  font-size: 1em;
+  font-style: italic;
 }
 
 .header-name-title {
   margin: auto;
   width: 100%;
-  text-align: center;
-}
-
-.header-name {
-  font-size: 44px;
-}
-
-.header-title {
-  padding: 10px;
+  text-align: left;
+  margin-left: 20px;
+  color: $header-font-color;
 }
 
 .headshot {
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 100%;
   border-radius: 50%;
-  border: 4px solid black;
-  background: url('../../images/personal_site_headshot_circle.png') no-repeat center center;
+  vertical-align: center;
+  border: 2px solid $header-font-color;
+  background: url('../../images/personal_site_headshot_final.png') no-repeat center center;
   &:hover {
-    background: url('../../images/personal_site_hat_headshot_circle.png') no-repeat center center;
+    background: url('../../images/personal_site_hat_headshot_final.png') no-repeat center center;
   }
 }
