@@ -10,7 +10,6 @@ const ProjectCard = (props) => {
 
   return (
     <div className='project-card' onClick={() => redirect()}>
-      <p className='tooltip-text'>Click to see the project on GitHub!</p>
       <h2 className='project-card-title'>{title}</h2>
       <img src={img} className='project-card-img'/>
       <p className='project-card-summary'>{summary}</p>
