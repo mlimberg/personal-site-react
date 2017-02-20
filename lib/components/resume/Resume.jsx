@@ -6,10 +6,10 @@ import './resume-style';
 const Resume = () => {
   return (
     <div className='resume-container'>
-      <a href='https://resume.creddle.io/resume/7kk4iroeef0' target='_blank'>
-        <img src='./lib/images/resume.png'
+      {/* <a href='https://resume.creddle.io/resume/7kk4iroeef0' target='_blank'> */}
+        <img src='./lib/images/resume.jpg'
              className='resume-img' />
-      </a>
+      {/* </a> */}
     </div>
   );
 }
