@@ -5,8 +5,11 @@ import './resume-style';
 
 const Resume = () => {
   return (
-    <div>
-      {/* <PDF file='MLimberg_Resume.pdf'/> */}
+    <div className='resume-container'>
+      <a href='https://resume.creddle.io/resume/7kk4iroeef0' target='_blank'>
+        <img src='./lib/images/resume.png'
+             className='resume-img' />
+      </a>
     </div>
   );
 }
