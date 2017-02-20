@@ -9,7 +9,6 @@ export default class Contact extends Component {
       name: '',
       email: '',
       message: '',
-      messages: [],
       error: false
     }
   }
@@ -29,13 +28,8 @@ export default class Contact extends Component {
   storeMessage() {
     const { name, email, message } = this.state;
     const newMessage = { name, email, message };
-    firebase.database().ref('messages').set({newMessage})
-    const updatedMessages = [...this.state.messages, newMessage]
-    this.setState({ messages: updatedMessages,
-                    name: '',
-                    email: '',
-                    message: ''
-                  })
+    firebase.database().ref(this.state.name).push(Object.assign(newMessage, { date: Date() }))
+      .then(() => {this.setState({ name: '', email: '', message: '' })})
   }
 
   invalidEmail() {
