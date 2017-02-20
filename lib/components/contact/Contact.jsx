@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import firebase, { reference } from '../../firebase';
 import './contact-style';
 
 export default class Contact extends Component {
@@ -8,7 +9,6 @@ export default class Contact extends Component {
       name: '',
       email: '',
       message: '',
-      messages: [],
       error: false
     }
   }
@@ -27,13 +27,9 @@ export default class Contact extends Component {
 
   storeMessage() {
     const { name, email, message } = this.state;
-    const newMessage = { name, email, message }
-    const updatedMessages = [...this.state.messages, newMessage]
-    this.setState({ messages: updatedMessages,
-                    name: '',
-                    email: '',
-                    message: ''
-                  })
+    const newMessage = { name, email, message };
+    firebase.database().ref(this.state.name).push(Object.assign(newMessage, { date: Date() }))
+      .then(() => {this.setState({ name: '', email: '', message: '' })})
   }
 
   invalidEmail() {
@@ -57,7 +53,7 @@ export default class Contact extends Component {
             Name:
             <input className='contact-form-name'
                    ref='name'
-                   placeholder='Your Name'
+                  //  placeholder='Your Name'
                    value={name}
                    onChange={(e) => this.setState({ name: e.target.value })}/>
           </label>
@@ -66,7 +62,7 @@ export default class Contact extends Component {
             Email:
             <input className='contact-form-email'
                    name='_replyto'
-                   placeholder='Your Email'
+                  //  placeholder='Your Email'
                    value={email}
                    onChange={(e) => this.setState({ email: e.target.value })}/>
           </label>
@@ -77,12 +73,14 @@ export default class Contact extends Component {
             Message:
             <textarea className='contact-form-message'
                       name='message'
-                      placeholder='Your Message'
+                      // placeholder='Your Message'
                       value={message}
                       onChange={(e) => this.setState({ message: e.target.value })} />
           </label>
 
           <button type='submit'
+                  disabled={!this.state.email || !this.state.name || !this.state.message}
+                  className='btn send-btn'
                   onClick={this.handleSubmit.bind(this)}>
             SEND
           </button>
