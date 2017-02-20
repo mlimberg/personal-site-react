@@ -20,19 +20,21 @@ export default class Header extends Component {
       </Link>
 
       <div className='header-name-title'>
-        <h1 className='header-name'>Mike Limberg</h1>
+        <Link to='/'>
+          <h1 className='header-name'>Mike Limberg</h1>
+        </Link>
         <h3 className='header-title'>Front-End Developer</h3>
       </div>
 
       <ul className='top-nav-links'>
         <li>
-          <Link to='/resume'>Resume</Link>
+          <Link className='nav-link' to='/resume'>Resume</Link>
         </li>
         <li>
-          <Link to='/projects'>Projects</Link>
+          <Link className='nav-link' to='/projects'>Projects</Link>
         </li>
         <li>
-          <Link to='/contact'>Contact</Link>
+          <Link className='nav-link' to='/contact'>Contact</Link>
         </li>
       </ul>
     </div>
