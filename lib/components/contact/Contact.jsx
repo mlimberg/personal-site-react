@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import firebase, { reference } from '../../firebase';
 import './contact-style';
 
 export default class Contact extends Component {
@@ -27,7 +28,8 @@ export default class Contact extends Component {
 
   storeMessage() {
     const { name, email, message } = this.state;
-    const newMessage = { name, email, message }
+    const newMessage = { name, email, message };
+    firebase.database().ref('messages').set({newMessage})
     const updatedMessages = [...this.state.messages, newMessage]
     this.setState({ messages: updatedMessages,
                     name: '',
