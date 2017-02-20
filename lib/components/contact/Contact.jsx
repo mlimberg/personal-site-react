@@ -53,7 +53,7 @@ export default class Contact extends Component {
             Name:
             <input className='contact-form-name'
                    ref='name'
-                   placeholder='Your Name'
+                  //  placeholder='Your Name'
                    value={name}
                    onChange={(e) => this.setState({ name: e.target.value })}/>
           </label>
@@ -62,7 +62,7 @@ export default class Contact extends Component {
             Email:
             <input className='contact-form-email'
                    name='_replyto'
-                   placeholder='Your Email'
+                  //  placeholder='Your Email'
                    value={email}
                    onChange={(e) => this.setState({ email: e.target.value })}/>
           </label>
@@ -73,12 +73,14 @@ export default class Contact extends Component {
             Message:
             <textarea className='contact-form-message'
                       name='message'
-                      placeholder='Your Message'
+                      // placeholder='Your Message'
                       value={message}
                       onChange={(e) => this.setState({ message: e.target.value })} />
           </label>
 
           <button type='submit'
+                  disabled={!this.state.email || !this.state.name || !this.state.message}
+                  className='btn send-btn'
                   onClick={this.handleSubmit.bind(this)}>
             SEND
           </button>

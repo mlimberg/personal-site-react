@@ -1,0 +1,30 @@
+.btn {
+  border: none;
+  border-radius: 5px;
+  height: 25px;
+  font-size: 14px;
+  padding: 5px;
+  font-weight: 400;
+  background: $header-background-color;
+  color: $header-font-color;
+  box-shadow: 1px 1px 1px $header-font-color;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background: $header-font-color;
+    color: $header-background-color;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px $header-background-color;
+  }
+  &:disabled, &:disabled:hover {
+    background: #efefef;
+    color: gray;
+    box-shadow: none;
+    cursor: default;
+  }
+  // &:disabled:hover {
+  //   background: #efefef;
+  //   box-shadow: none;
+  // }
+}
