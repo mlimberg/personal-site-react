@@ -1,4 +1,10 @@
-# React Starter Kit
+#About
+
+This site is intended to provide a single online destination for employers, peers and anyone else looking to get in touch with me. It also acts as my personal CSS playground, so don't be offended if the styles are overwhelming or inconsistent. 
+
+Thanks for checking it out!
+
+###Setup
 
 To install the dependencies:
 
