@@ -21,7 +21,6 @@
   margin: auto;
   flex-direction: column;
   align-items: center;
-  margin-top: 150px;
   padding: 20px;
 }
 
@@ -30,7 +29,7 @@
 }
 
 .contact-form-message {
-  @include input-styles(80px);
+  @include input-styles(120px);
   width: 300px;
 }
 
@@ -47,4 +46,23 @@ label {
 
 .send-btn {
   margin: 5px;
+}
+
+.contact-h1 {
+  margin: 10px auto;
+  font-weight: 300;
+  font-size: 3em;
+  text-align: center;
+}
+
+.contact-container {
+  margin-top: 160px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.new-message-btn {
+  width: 130px;
+  margin: 10px auto;
 }

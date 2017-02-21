@@ -9,7 +9,8 @@ export default class Contact extends Component {
       name: '',
       email: '',
       message: '',
-      error: false
+      error: false,
+      sent: false
     }
   }
 
@@ -29,7 +30,7 @@ export default class Contact extends Component {
     const { name, email, message } = this.state;
     const newMessage = { name, email, message };
     firebase.database().ref(this.state.name).push(Object.assign(newMessage, { date: Date() }))
-      .then(() => {this.setState({ name: '', email: '', message: '' })})
+      .then(() => {this.setState({ name: '', email: '', message: '', sent: true, error: false })})
   }
 
   invalidEmail() {
@@ -39,32 +40,43 @@ export default class Contact extends Component {
     )
   }
 
-  render() {
-    const { name, email, message } = this.state;
+  thankYouMessage() {
+    return(
+      <div className='contact-container'>
+        <h3 className='contact-h1'>Thank you for your message!</h3>
+        <button className='btn new-message-btn'
+                onClick={() => this.setState({ sent: false, error: false })}>
+          New Message
+        </button>
+      </div>
+    )
+  }
 
+  contactForm() {
+    const { name, email, message } = this.state;
     return (
-      <div>
-        <form className='contact-form'
-              // action='https://formspree.io/limbergmike@gmail.com'
-              // method='POST'
-              >
+      <div className='contact-container'>
+
+        <h1 className='contact-h1'>Send me a note!</h1>
+
+        <form className='contact-form'>
 
           <label>
             Name:
             <input className='contact-form-name'
-                   ref='name'
-                  //  placeholder='Your Name'
-                   value={name}
-                   onChange={(e) => this.setState({ name: e.target.value })}/>
+              ref='name'
+              //  placeholder='Your Name'
+              value={name}
+              onChange={(e) => this.setState({ name: e.target.value })}/>
           </label>
 
           <label>
             Email:
             <input className='contact-form-email'
-                   name='_replyto'
-                  //  placeholder='Your Email'
-                   value={email}
-                   onChange={(e) => this.setState({ email: e.target.value })}/>
+              name='_replyto'
+              //  placeholder='Your Email'
+              value={email}
+              onChange={(e) => this.setState({ email: e.target.value })}/>
           </label>
 
           {this.invalidEmail()}
@@ -72,20 +84,24 @@ export default class Contact extends Component {
           <label>
             Message:
             <textarea className='contact-form-message'
-                      name='message'
-                      // placeholder='Your Message'
-                      value={message}
-                      onChange={(e) => this.setState({ message: e.target.value })} />
+              name='message'
+              // placeholder='Your Message'
+              value={message}
+              onChange={(e) => this.setState({ message: e.target.value })} />
           </label>
 
           <button type='submit'
-                  disabled={!this.state.email || !this.state.name || !this.state.message}
-                  className='btn send-btn'
-                  onClick={this.handleSubmit.bind(this)}>
+            disabled={!this.state.email || !this.state.name || !this.state.message}
+            className='btn send-btn'
+            onClick={this.handleSubmit.bind(this)}>
             SEND
           </button>
         </form>
       </div>
-    );
+    )
+  }
+
+  render() {
+    { return !this.state.sent ? this.contactForm() : this.thankYouMessage() }
   }
 }
