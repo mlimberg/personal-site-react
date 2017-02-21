@@ -36,7 +36,7 @@ export default class Contact extends Component {
   invalidEmail() {
     if(this.state.error)
     return (
-      <p className='invalid-email-error'>Please enter a valid email so I can respond</p>
+      <p className='invalid-email-error'>Please ensure that you enter a valid email</p>
     )
   }
 
@@ -57,38 +57,38 @@ export default class Contact extends Component {
     return (
       <div className='contact-container'>
 
-        <h1 className='contact-h1'>Send me a note!</h1>
 
         <form className='contact-form'>
+          <h1 className='contact-h1'>Send me a note!</h1>
 
-          <label>
-            Name:
+          {/* <label>
+            Name: */}
             <input className='contact-form-name'
               ref='name'
-              //  placeholder='Your Name'
+               placeholder='Name'
               value={name}
               onChange={(e) => this.setState({ name: e.target.value })}/>
-          </label>
+          {/* </label> */}
 
-          <label>
-            Email:
+          {/* <label>
+            Email: */}
             <input className='contact-form-email'
               name='_replyto'
-              //  placeholder='Your Email'
+               placeholder='Email'
               value={email}
               onChange={(e) => this.setState({ email: e.target.value })}/>
-          </label>
+          {/* </label> */}
 
           {this.invalidEmail()}
 
-          <label>
-            Message:
+          {/* <label>
+            Message: */}
             <textarea className='contact-form-message'
               name='message'
-              // placeholder='Your Message'
+              placeholder='Message'
               value={message}
               onChange={(e) => this.setState({ message: e.target.value })} />
-          </label>
+          {/* </label> */}
 
           <button type='submit'
             disabled={!this.state.email || !this.state.name || !this.state.message}

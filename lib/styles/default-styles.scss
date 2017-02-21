@@ -1,25 +1,27 @@
+@import './variables';
+
 .btn {
   border: none;
   border-radius: 5px;
-  height: 25px;
+  height: 30px;
   font-size: 14px;
   padding: 5px;
   font-weight: 400;
-  background: $header-background-color;
-  color: $header-font-color;
-  box-shadow: 1px 1px 1px $header-font-color;
+  background: $btn-background;
+  color: $btn-font;
+  box-shadow: 1px 1px 1px $header-background-color;
   &:focus {
     outline: none;
   }
   &:hover {
-    background: $header-font-color;
-    color: $header-background-color;
+    background: $btn-hover-background;
+    color: $btn-hover-font;
     cursor: pointer;
-    box-shadow: 1px 1px 1px $header-background-color;
+    box-shadow: 2px 2px 1px $header-background-color;
   }
   &:disabled, &:disabled:hover {
-    background: #efefef;
-    color: gray;
+    background: $btn-disabled;
+    color: $btn-disabled-font;
     box-shadow: none;
     cursor: default;
   }
