@@ -28,10 +28,10 @@ export default class Header extends Component {
 
       <ul className='top-nav-links'>
         <li>
-          <Link className='nav-link' to='/resume'>Resume</Link>
+          <Link className='nav-link' to='/projects'>Projects</Link>
         </li>
         <li>
-          <Link className='nav-link' to='/projects'>Projects</Link>
+          <Link className='nav-link' to='/resume'>Resume</Link>
         </li>
         <li>
           <Link className='nav-link' to='/contact'>Contact</Link>
