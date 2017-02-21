@@ -34,7 +34,7 @@
   &:hover {
     transform: scale(1.2);
     transition: all ease-in-out .5s;
-    // text-shadow: 0px 0px 1px 2px yellow;
+    text-shadow: 0px 0px 2px #16a9ff;
   }
 }
 
@@ -116,3 +116,7 @@ a:link, a:active, a, a:visited {
     transform: scaleX(1);
   }
 }
+
+// .contact-nav-link {
+//    Need something to make it stand out...
+// }

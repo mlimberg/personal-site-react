@@ -3,10 +3,19 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 85.8vh;
+  // height: 85.8vh;
+  height: 100vh;
 }
 
-// .home-img {
-//   margin: auto;
-//   width: 100%;
-// }
+.text-box {
+  margin: auto;
+  width: 500px;
+  height: 300px;
+  border-radius: 2px;
+  background-color: white;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 200px;
+  box-shadow: 1px 1px 6px 2px gray;
+}

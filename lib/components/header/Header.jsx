@@ -6,9 +6,6 @@ import './header-style';
 export default class Header extends Component {
   constructor() {
     super();
-    this.state = {
-      // hover: false
-    }
   }
 
   render() {
@@ -34,7 +31,9 @@ export default class Header extends Component {
           <Link className='nav-link' to='/resume'>Resume</Link>
         </li>
         <li>
-          <Link className='nav-link' to='/contact'>Contact</Link>
+          <Link className='nav-link' to='/contact'>
+            <span className='contact-nav-link'>Contact Me!</span>
+          </Link>
         </li>
       </ul>
     </div>
