@@ -95,6 +95,7 @@ a:link, a:active, a, a:visited {
 }
 
 .nav-link {
+  padding: 2px;
   position: relative;
   &:before {
   content: "";
