@@ -12,34 +12,38 @@ export default class Header extends Component {
     return (
       <div className='header'>
 
-      <Link to='/'>
-        <div className='headshot'></div>
-      </Link>
-
-      <div className='header-name-title'>
+      <section className='headshot-and-name'>
         <Link to='/'>
-          <h1 className='header-name'>Mike Limberg</h1>
+          <div className='headshot'></div>
         </Link>
-        <h3 className='header-title'>Front-End Developer</h3>
-      </div>
 
-      <ul className='top-nav-links'>
-        <li>
-          <Link to='/projects'>
-            <h3 className='nav-link'>Projects</h3>
+        <div className='header-name-title'>
+          <Link to='/'>
+            <h1 className='header-name'>Mike Limberg</h1>
           </Link>
-        </li>
-        <li>
-          <Link to='/resume'>
-            <h3 className='nav-link'>Resume</h3>
-          </Link>
-        </li>
-        <li>
-          <Link to='/contact'>
-            <h3 className='contact-nav-link nav-link'>Contact Me</h3>
-          </Link>
-        </li>
-      </ul>
+          <h3 className='header-title'>Front-End Developer</h3>
+        </div>
+      </section>
+
+      <section className='nav'>
+        <ul className='top-nav-links'>
+          <li>
+            <Link to='/projects'>
+              <h3 className='nav-link'>Projects</h3>
+            </Link>
+          </li>
+          <li>
+            <Link to='/resume'>
+              <h3 className='nav-link'>Resume</h3>
+            </Link>
+          </li>
+          <li>
+            <Link to='/contact'>
+              <h3 className='contact-nav-link nav-link'>Contact Me</h3>
+            </Link>
+          </li>
+        </ul>
+      </section>
     </div>
   )
   }

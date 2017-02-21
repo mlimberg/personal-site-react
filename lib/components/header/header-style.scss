@@ -19,7 +19,15 @@
   justify-content: center;
 }
 
-.header-option {
+.headshot-and-name {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .top-nav-links li {
@@ -31,6 +39,7 @@
   transform: perspective(1px) translateZ(0);
   transition-duration: 0.3s;
   transition-property: transform;
+  float: right;
   &:hover {
     transform: scale(1.2);
     transition: all ease-in-out .5s;
@@ -118,6 +127,23 @@ a:link, a:active, a, a:visited {
   }
 }
 
-// .contact-nav-link {
-//    Need something to make it stand out...
-// }
+@media (max-width: 1050px) {
+  .top-nav-links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .headshot-and-name {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+  }
+
+}
