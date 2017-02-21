@@ -1,3 +1,9 @@
 .other {
   margin-top: 130px;
 }
+
+@media (max-width: 1100px) {
+  .other {
+    margin-top: 210px;
+  }
+}
