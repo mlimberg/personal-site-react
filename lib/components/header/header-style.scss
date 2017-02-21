@@ -52,7 +52,7 @@ a:link, a:active, a, a:visited {
 }
 
 .header-name {
-  font-size: 4.8em;
+  font-size: 5.3vw;
   width: 450px;
   position: relative;
   &:before {
@@ -139,10 +139,15 @@ a:link, a:active, a, a:visited {
     display: flex;
     flex-direction: row;
   }
+
   .header {
     display: flex;
     flex-direction: column;
     height: 180px;
+  }
+
+  .header-name {
+    font-size: 6.8vw;
   }
 
 }
