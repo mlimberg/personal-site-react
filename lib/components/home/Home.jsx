@@ -4,7 +4,7 @@ import './home-style';
 const Home = () => {
   return (
     <div className='main-app'>
-      {/* HOME! */}
+      <img src='lib/images/rio-campsite' />
     </div>
   )
 }
