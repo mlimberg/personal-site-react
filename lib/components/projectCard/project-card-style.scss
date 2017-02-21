@@ -40,6 +40,13 @@
 
 .project-card-summary {
   text-align: center;
+  opacity: 0;
+  transition: 1s;
+}
+
+.project-card:hover .project-card-summary {
+  opacity: 1;
+  visibility: visible;
 }
 
 @media (min-width: 600px) and (max-width: 900px) {
