@@ -25,14 +25,18 @@ export default class Header extends Component {
 
       <ul className='top-nav-links'>
         <li>
-          <Link className='nav-link' to='/projects'>Projects</Link>
+          <Link to='/projects'>
+            <h3 className='nav-link'>Projects</h3>
+          </Link>
         </li>
         <li>
-          <Link className='nav-link' to='/resume'>Resume</Link>
+          <Link to='/resume'>
+            <h3 className='nav-link'>Resume</h3>
+          </Link>
         </li>
         <li>
-          <Link className='nav-link' to='/contact'>
-            <span className='contact-nav-link'>Contact Me!</span>
+          <Link to='/contact'>
+            <h3 className='contact-nav-link nav-link'>Contact Me!</h3>
           </Link>
         </li>
       </ul>
