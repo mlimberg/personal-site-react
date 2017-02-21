@@ -151,3 +151,46 @@ a:link, a:active, a, a:visited {
   }
 
 }
+
+@media (max-width: 500px) {
+  .headshot-and-name {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .headshot {
+    height: 110px;
+  }
+
+  .header-name {
+    font-size: 9vw;
+  }
+
+  .header-title {
+    padding: 10px 0px;
+  }
+
+  .top-nav-links {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    height: 28%;
+  }
+
+  .top-nav-links li {
+    padding: 10px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+  }
+
+  .nav {
+    margin-top: 20px;
+  }
+}

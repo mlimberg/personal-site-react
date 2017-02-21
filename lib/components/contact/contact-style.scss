@@ -76,3 +76,32 @@
 //     background-color: $contact-green;
 //   }
 // }
+
+@media (max-width: 500px) {
+  .contact-form {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .contact-container {
+    background-color: $contact-green;
+    display: block;
+    position: absolute;
+    margin-top: 205px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .contact-h1 {
+    font-size: 1.5em;
+  }
+
+  .new-message-btn {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+  }
+}
