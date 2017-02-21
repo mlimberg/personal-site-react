@@ -16,7 +16,8 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-right: 30px;
 }
 
 .headshot-and-name {
@@ -26,20 +27,18 @@
 
 .nav {
   display: flex;
-  justify-content: flex-end;
   width: 100%;
 }
 
 .top-nav-links li {
   align-self: center;
-  padding: 20px;
+  padding: 20px 30px;
   font-weight: 500;
   font-size: 30px;
   color: $header-font-color;
   transform: perspective(1px) translateZ(0);
   transition-duration: 0.3s;
   transition-property: transform;
-  float: right;
   &:hover {
     transform: scale(1.2);
     transition: all ease-in-out .5s;
@@ -127,7 +126,7 @@ a:link, a:active, a, a:visited {
   }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1100px) {
   .top-nav-links {
     width: 100%;
     display: flex;
