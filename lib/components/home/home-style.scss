@@ -1,13 +1,21 @@
 .main-app {
-  // background: url('../../images/rio-campsite.jpg') no-repeat center center;
-  // background-size: 100% 100%;
-  // background-repeat: no-repeat;
-  // height: 100%;
-  // width: 100%;
-//   text-align: center;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   margin: 20px auto;
-//   padding-top: 200px;
+  background-image: url('../../images/rio-campsite-washed.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  // height: 85.8vh;
+  height: 100vh;
+}
+
+.text-box {
+  margin: auto;
+  width: 500px;
+  height: 300px;
+  border-radius: 2px;
+  background-color: white;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 200px;
+  box-shadow: 1px 1px 6px 2px gray;
 }
