@@ -1,21 +1,37 @@
+@import '../../styles/variables';
+
 .main-app {
   background-image: url('../../images/rio-campsite-washed.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  // height: 85.8vh;
   height: 100vh;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom:0px;
 }
 
 .text-box {
   margin: auto;
   width: 500px;
-  height: 300px;
-  border-radius: 2px;
-  background-color: white;
+  height: 200px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, .8);
+  opacity: .85;
   position: fixed;
+
+  // box-shadow: 1px 1px 6px 2px gray;
+}
+
+.home-h1 {
+  position: absolute;
   left: 0px;
   right: 0px;
-  top: 200px;
-  box-shadow: 1px 1px 6px 2px gray;
+  top: 340px;
+  text-align: center;
+  margin: 40px auto;
+  color: rgba(255, 255, 255, 1);
+  font-size: 60px;
 }

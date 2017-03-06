@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import './resume-style';
-// import spdf from 'simple-react-pdf'
-// import PDF from 'react-pdf-js';
+
 
 const Resume = () => {
+
+  const handleClick = () => {
+    window.open('https://resume.creddle.io/resume/7kk4iroeef0', '_blank')
+  }
+
   return (
     <div className='resume-container'>
-      {/* <a href='https://resume.creddle.io/resume/7kk4iroeef0' target='_blank'> */}
         <img src='./lib/images/resume.jpg'
-             className='resume-img' />
-      {/* </a> */}
+             className='resume-img'
+             onClick={() => handleClick()}/>
     </div>
   );
 }

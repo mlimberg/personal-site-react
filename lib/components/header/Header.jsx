@@ -39,7 +39,7 @@ export default class Header extends Component {
           </li>
           <li>
             <Link to='/contact'>
-              <h3 className='contact-nav-link nav-link'>Contact Me</h3>
+              <h3 className='contact-nav-link'>Contact Me</h3>
             </Link>
           </li>
         </ul>
