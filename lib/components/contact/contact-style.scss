@@ -70,9 +70,6 @@
 }
 
 @media (max-width: 500px) {
-  body {
-    background-color: $contact-green;
-  }
 
   .contact-form {
     width: 100%;
@@ -84,7 +81,7 @@
     background-color: $contact-green;
     display: block;
     position: absolute;
-    margin-top: 238px;
+    margin-top: 31vh;
     top: 0;
     bottom: 0;
     right: 0;
