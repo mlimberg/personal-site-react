@@ -7,7 +7,7 @@
   align-items: center;
   max-width: 27%;
   min-width: 25%;
-  height: 350px;
+  height: 280px;
   background-color: white;
   margin: 20px auto;
   border-radius: 3px;
@@ -25,7 +25,7 @@
 }
 
 .project-card-img {
-  width: 75%;
+  width: 65%;
 }
 
 .project-card-title {
@@ -61,5 +61,6 @@
 @media (max-width: 599px) {
   .project-card {
     min-width: 80%;
+    max-width: 81%;
   }
 }

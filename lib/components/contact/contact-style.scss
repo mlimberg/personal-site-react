@@ -88,7 +88,7 @@
     background-color: $contact-green;
     display: block;
     position: absolute;
-    margin-top: 205px;
+    margin-top: 175px;
     top: 0;
     bottom: 0;
     right: 0;
@@ -103,5 +103,9 @@
     display: flex;
     justify-content: center;
     margin: 20px auto;
+  }
+
+  .contact-form-name, .contact-form-email, .contact-form-message {
+    width: 80%;
   }
 }
