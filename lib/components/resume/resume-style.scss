@@ -1,19 +1,20 @@
-.SimplePDF {
-  width: 350px;
-  height: 800px;
-  border: 1px dashed red;
-  margin: 15px;
-  padding: 15px;
-  float: left;
-}
-
 .resume-container {
-  margin-top: 150px;
+  margin-top: 160px;
 }
 
 .resume-img {
   display: flex;
-  margin: 20px auto;
+  margin: 30px auto 10px auto;
   box-shadow: 3px 3px 8px 1px rgba(163,161,163,1);
   width: 70%;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .resume-container {
+    margin-top: 260px;
+  }
 }
