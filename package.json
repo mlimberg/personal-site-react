@@ -40,7 +40,6 @@
     "mocha-loader": "^0.7.1",
     "node-libs-browser": "^1.0.0",
     "node-sass": "^3.4.2",
-    "react-fade": "^1.1.1",
     "react-image-load": "^1.1.2",
     "react-pdf": "0.0.10",
     "sass-loader": "^3.2.0",
