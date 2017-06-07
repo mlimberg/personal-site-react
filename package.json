@@ -39,6 +39,7 @@
     "mocha-loader": "^0.7.1",
     "node-libs-browser": "^1.0.0",
     "node-sass": "^3.4.2",
+    "prop-types": "^15.5.10",
     "sass-loader": "^3.2.0",
     "simple-react-pdf": "^1.0.6",
     "style-loader": "^0.13.1",
